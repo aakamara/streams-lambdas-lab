@@ -17,18 +17,24 @@ public class MVP {
         // Implement me :)
         //Stream<String> namesStream = namesStream.get();
         //List<String> name = names.stream().map((names) -> getName).collect(Collectors.toList());
+        names.stream().forEach(System.out::println);
     }
 
     /*
         Given a List<Integers>, return a List<Integer> with event numbers.
      */
+
+
+
+
     public static List<Integer> returnEvenNumbers(List<Integer> numbers) {
         // Implement me :)
-        /* return Arrays.stream(numbers)
+        /* numbers.stream()
                 .filter(n -> n % 2 == 0)
                 .collect(Collectors.toList()); */
-
-    }
+            Predicate
+            numbers.stream().filter(n -> n % == 0)
+            }
 
     /*
         Given an int [], double the value of each int and return an int [].
