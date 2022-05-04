@@ -24,9 +24,9 @@ public class MVP {
      */
     public static List<Integer> returnEvenNumbers(List<Integer> numbers) {
         // Implement me :)
-        return Arrays.stream(numbers)
-                .filter(i -> i % 2 == 0)
-                .collect(Collectors.toList());
+        /* return Arrays.stream(numbers)
+                .filter(n -> n % 2 == 0)
+                .collect(Collectors.toList()); */
 
     }
 
@@ -35,6 +35,7 @@ public class MVP {
     */
     public int[] doubleInts(int[] numbers) {
         // Implement me :)
+        //.count()
         return null;
     }
 
@@ -43,6 +44,7 @@ public class MVP {
      */
     public List<String> splitToAllCapsList(String input) {
         // Implement me :)
+        //.map()
         return null;
     }
 
@@ -53,6 +55,8 @@ public class MVP {
     */
     public List<String> filterByFirstLetterAndOrder(List<String> list, String letter) {
         // Implement me :)
+        //.filter() conditional processing
+        //.findFirst
         return null;
     }
 
@@ -63,6 +67,8 @@ public class MVP {
     */
     public List<String> filterWords(List<String> words, int maxLength, String firstLetter) {
         // Implement me :)
+        //.filter
+        //.reduce
         return null;
     }
 }
