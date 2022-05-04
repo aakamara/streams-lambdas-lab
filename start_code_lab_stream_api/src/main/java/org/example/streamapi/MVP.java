@@ -1,6 +1,11 @@
 package org.example.streamapi;
 
+import org.example.streamapi.model.User;
+
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class MVP {
 
@@ -10,15 +15,19 @@ public class MVP {
 
     public void printNames(List<String> names) {
         // Implement me :)
-
+        //Stream<String> namesStream = namesStream.get();
+        //List<String> name = names.stream().map((names) -> getName).collect(Collectors.toList());
     }
 
     /*
         Given a List<Integers>, return a List<Integer> with event numbers.
      */
-    public List<Integer> returnEvenNumbers(List<Integer> numbers) {
+    public static List<Integer> returnEvenNumbers(List<Integer> numbers) {
         // Implement me :)
-        return null;
+        return Arrays.stream(numbers)
+                .filter(i -> i % 2 == 0)
+                .collect(Collectors.toList());
+
     }
 
     /*
