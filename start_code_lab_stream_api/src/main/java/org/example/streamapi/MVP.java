@@ -4,6 +4,7 @@ import org.example.streamapi.model.User;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -29,12 +30,16 @@ public class MVP {
 
     public static List<Integer> returnEvenNumbers(List<Integer> numbers) {
         // Implement me :)
+        // a predicate is required for filtering out something
+        //specific
         /* numbers.stream()
                 .filter(n -> n % 2 == 0)
                 .collect(Collectors.toList()); */
-            Predicate
-            numbers.stream().filter(n -> n % == 0)
-            }
+        return numbers.stream().filter(num -> num % 2 == 0).collect(Collectors.toList());
+           /* return numbers.stream()
+                    .filter(evenOnly)
+                    .collect(Collectors.toList());*/
+    }
 
     /*
         Given an int [], double the value of each int and return an int [].
