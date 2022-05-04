@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class MVP {
@@ -26,19 +27,23 @@ public class MVP {
      */
 
 
-
-
     public static List<Integer> returnEvenNumbers(List<Integer> numbers) {
         // Implement me :)
         // a predicate is required for filtering out something
         //specific
-        /* numbers.stream()
+        /* return numbers.stream()
                 .filter(n -> n % 2 == 0)
                 .collect(Collectors.toList()); */
         return numbers.stream().filter(num -> num % 2 == 0).collect(Collectors.toList());
            /* return numbers.stream()
                     .filter(evenOnly)
                     .collect(Collectors.toList());*/
+
+        /*List<Integer> evenNums = numbers.stream()
+        .filter(num -> nums % 2 == 0)
+        .collect(Collectors.toList());
+
+         */
     }
 
     /*
@@ -47,7 +52,13 @@ public class MVP {
     public int[] doubleInts(int[] numbers) {
         // Implement me :)
         //.count()
-        return null;
+        //IntStream stream = Arrays.stream(numbers);
+        //int[] doubleNumbers = stream.map(num -> num * 2).toArray();
+
+        //return doubleNumbers;
+
+        return Arrays.stream(numbers).map(num -> num * 2).toArray();
+
     }
 
     /*
@@ -55,8 +66,10 @@ public class MVP {
      */
     public List<String> splitToAllCapsList(String input) {
         // Implement me :)
-        //.map()
-        return null;
+        //.split()
+        return Arrays.stream(input.split(""))
+                .map(str -> str.toUpperCase())
+                .collect(Collectors.toList());
     }
 
     /*
@@ -68,6 +81,7 @@ public class MVP {
         // Implement me :)
         //.filter() conditional processing
         //.findFirst
+        list.stream().filter(str -> str)
         return null;
     }
 
