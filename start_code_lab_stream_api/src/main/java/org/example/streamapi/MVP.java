@@ -96,6 +96,10 @@ public class MVP {
         // Implement me :)
         //.filter
         //.reduce
-        return null;
+        return words.stream()
+                .filter(str -> str.length() < maxLength && str.startsWith(firstLetter))
+                .collect(Collectors.toList());
+        /* words.stream().filter(str -> str.length() < maxLength && str.startsWith(firstLetter))
+                .filter(str -> str.startsWith(firstLetter)) */
     }
 }
