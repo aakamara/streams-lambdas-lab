@@ -82,11 +82,9 @@ public class MVP {
         //.filter() conditional processing
         //.findFirst
         //list.stream().filter(str -> str.startsWith(letter));
-        list.stream().filter(str -> str.substring(0, 0).
-                equals(letter))
+         return list.stream().filter(str -> str.substring(0, 1).equals(letter))
                 .sorted().map(str -> str.toUpperCase())
                 .collect(Collectors.toList());
-        return null;
     }
 
     /*
